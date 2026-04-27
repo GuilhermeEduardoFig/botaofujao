@@ -10,6 +10,10 @@
     margin: 0;
 }
 
+.painel{
+    position: relative;
+}
+
 .painel {
     margin: 20px auto;
     background-color: white;
@@ -240,20 +244,21 @@
     
     <script>
         function fuja(){
-            var botaonao = document.getElementById("nao")
+    var botao = document.getElementById("nao");
+    var painel = document.querySelector(".painel");
 
-            var largurajanela = window.innerWidth;
-            var alturajanela = window.innerHeight;
+    var larguraPainel = painel.clientWidth;
+    var alturaPainel = painel.clientHeight;
 
-            var maxX = largurajanela - botaonao.offsetWidth;
-            var maxY = alturajanela - botaonao.offsetHeight;
+    var maxX = larguraPainel - botao.offsetWidth;
+    var maxY = alturaPainel - botao.offsetHeight;
 
-            var aleatorioX = Math.floor(Math.random() * maxX);
-            var aleatorioY = Math.floor(Math.random() * maxY)
+    var x = Math.random() * maxX;
+    var y = Math.random() * maxY;
 
-            botaonao.style.left = aleatorioX + "px";
-            botaonao.style.top = aleatorioY + "px";
-        }
+    botao.style.left = x + "px";
+    botao.style.top = y + "px";
+}
 
         function abrirCarta(el){
     el.classList.add("aberta");
