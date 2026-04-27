@@ -266,7 +266,7 @@ let paginas = [];
 let paginaAtual = 0;
 
 function dividirTexto(){
-    const limite = 500; // quantidade de caracteres por página
+    const limite = 394; // quantidade de caracteres por página
     for(let i = 0; i < texto.length; i += limite){
         paginas.push(texto.substring(i, i + limite));
     }
